@@ -1,4 +1,6 @@
-# git pp: Git utility for auto-committing and concurrent pushing
+# git pp: 
+
+Git utility for auto-committing and concurrent pushing.
 
 Powered by `asyncio`, with no dependency besides `python>=3.10`.
 
@@ -9,7 +11,14 @@ Powered by `asyncio`, with no dependency besides `python>=3.10`.
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/487579.png)](https://asciinema.org/a/487579)
+<!-- [![asciicast](https://asciinema.org/a/487579.png)](https://asciinema.org/a/487579) -->
+<a href="https://asciinema.org/a/487579"><img src="https://asciinema.org/a/487579.png" alt="asciicast" style="width:500px;height:300px;"></a>
+
+
+In this demo, git pp did the following in \~/config and \~/gui repos:
+
+- (Concurrently) Auto staged all changes and commits with ISO-8601 timestamps as commit messages;
+- (Concurrently) Pushed the changes in the checked out branch to all of their remotes, in this case, they’re origin and lab.
 
 ## Installation
 
