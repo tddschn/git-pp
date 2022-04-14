@@ -1,4 +1,4 @@
-# git pp: 
+# git pp
 
 Git utility for auto-committing and concurrent pushing.
 
