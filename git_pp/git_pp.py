@@ -19,7 +19,7 @@ def get_args():
 
     parser = argparse.ArgumentParser(
         prog=__app_name__,
-        description='Git utility for auto-commiting and concurrent pushing',
+        description='Git utility for auto-committing and concurrent pushing',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('dirs',

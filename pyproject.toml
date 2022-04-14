@@ -1,7 +1,10 @@
+[project]
+readme = "README.md"
+
 [tool.poetry]
 name = "git-pp"
 version = "1.2.0"
-description = "Git utility for auto-commiting and concurrent pushing"
+description = "Git utility for auto-committing and concurrent pushing"
 authors = ["Xinyuan Chen <45612704+tddschn@users.noreply.github.com>"]
 license = "MIT"
 
