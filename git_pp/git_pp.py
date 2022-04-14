@@ -8,8 +8,9 @@ Purpose: Rock the Casbah
 import argparse, asyncio
 from pathlib import Path
 import sys
-from git_pre_pull import git_pre_pull, git_pre_pull_and_push_to_all_remote_C
-from git_push_to_all_remotes import git_push_to_all_remote_C
+from git_pp import __version__, __app_name__
+from git_pp.git_pre_pull import git_pre_pull, git_pre_pull_and_push_to_all_remote_C
+from git_pp.git_push_to_all_remotes import git_push_to_all_remote_C
 
 
 # --------------------------------------------------
@@ -17,7 +18,8 @@ def get_args():
     """Get command-line arguments"""
 
     parser = argparse.ArgumentParser(
-        description='Rock the Casbah',
+        prog=__app_name__,
+        description='Git utility for auto-commiting and concurrent pushing',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('dirs',
@@ -40,6 +42,11 @@ def get_args():
     #                     metavar='int',
     #                     type=int,
     #                     default=0)
+
+    parser.add_argument('-v',
+                        '--version',
+                        action='version',
+                        version=f'%(prog)s {__version__}')
 
     parser.add_argument('-so',
                         '--status-only',
@@ -121,5 +128,8 @@ async def main():
                            status_only=status_only)
 
 
-if __name__ == '__main__':
+def main_sync():
     asyncio.run(main())
+
+if __name__ == '__main__':
+    main_sync()

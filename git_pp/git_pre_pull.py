@@ -6,7 +6,7 @@ import datetime
 from asyncio.subprocess import Process
 from pathlib import Path
 
-from git_push_to_all_remotes import PathLike, git_push_to_all_remote
+from git_pp.git_push_to_all_remotes import PathLike, git_push_to_all_remote
 
 
 async def run_command(*args,
