@@ -6,8 +6,40 @@ Powered by `asyncio`, with no dependency besides `python>=3.10` and `git`.
 
 ## Features
 - Auto-stages and commits with custom or generated commit messages
-- Pushes to multiple or all remotes of a git repository concurrently with `asyncio`
-- Operates on any number of git repositories at the same time
+- Pushes to multiple or all remotes of a git repository **concurrently** with `asyncio`
+- Operates on **any number of git repositories** at the same time
+
+### Use cases and example usage
+- You have multiple remotes registered on a local git repository (or more)
+and want to push the changes to all or some of the remotes fast and efficiently.
+
+```bash
+# Use --push-only or -po
+
+$ git pp --push-only # this pushes to all remotes of the current git repository, does not stages or commits
+$ git pp --push-only --remote [one or more remotes] # only pushes to the specified remotes
+$ git pp -po --timeout 10 # terminates pushing to one remotes if it takes more than 10 seconds
+$ git pp -po -b dev ~/my-proj ~/my-proj2 # pushes the dev branch to all remotes in ~/my-proj and ~/my-proj2 repository
+```
+
+- You're tired of using `git add --all && git commit` every time you make a little change
+and want to automate this across one or more repositories.
+
+```bash
+$ git pp # stages all files in the current git repository and commits with a timestamp as the commit message
+$ git pp -m 'Initial commit' # custom commit message
+$ git pp --no-status # don't show git status and git add outputs
+```
+
+And you can do both of the above (auto-commit and push) with `--push`:
+```bash
+# Use --push or -p
+
+$ git pp --push # stages, commits and pushes to all remotes.
+$ git pp --push --remote [one or more remotes]
+$ git pp -p --timeout 10
+$ git pp -p -b dev ~/my-proj ~/my-proj2
+```
 
 ## Demo
 
