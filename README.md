@@ -4,6 +4,16 @@ A (tiny) Git utility for auto-committing and concurrent pushing.
 
 Powered by `asyncio`, with no dependency besides `python>=3.10` and `git`.
 
+- [git pp](#git-pp)
+	- [Features](#features)
+		- [Use cases and example usage](#use-cases-and-example-usage)
+	- [Demo](#demo)
+	- [Installation](#installation)
+		- [pipx](#pipx)
+		- [pip](#pip)
+		- [AUR](#aur)
+	- [Usage](#usage)
+	- [Develop](#develop)
 ## Features
 - Auto-stages and commits with custom or generated commit messages
 - Pushes to multiple or all remotes of a git repository **concurrently** with `asyncio`
