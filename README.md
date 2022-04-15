@@ -72,3 +72,10 @@ options:
   -t TIMEOUT, --timeout TIMEOUT
                         Timeout for a single push (default: None)
 ```
+
+## Develop
+```
+$ git clone https://github.com/tddschn/git-pp.git
+$ cd git-pp
+$ poetry install
+```
