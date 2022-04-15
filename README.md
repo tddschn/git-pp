@@ -2,7 +2,7 @@
 
 Git utility for auto-committing and concurrent pushing.
 
-Powered by `asyncio`, with no dependency besides `python>=3.10`.
+Powered by `asyncio`, with no dependency besides `python>=3.10` and `git`.
 
 ## Features
 - Auto-stages and commits with custom or generated commit messages
@@ -21,6 +21,8 @@ In this demo, git pp did the following in \~/config and \~/gui repos:
 - (Concurrently) Pushed the changes in the checked out branch to all of their remotes, in this case, they’re origin and lab.
 
 ## Installation
+
+First make sure the `git` executable is installed and in your `$PATH`.
 
 ### pipx
 

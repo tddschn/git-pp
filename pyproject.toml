@@ -5,12 +5,26 @@ description = "Git utility for auto-committing and concurrent pushing"
 authors = ["Xinyuan Chen <45612704+tddschn@users.noreply.github.com>"]
 license = "MIT"
 readme = "README.md"
+classifiers = [
+    "Environment :: Console",
+	"Operating System :: Unix",
+	"Framework :: AsyncIO",
+	"License :: OSI Approved :: MIT License",
+	"Topic :: Software Development :: Version Control :: Git",
+]
+homepage = "https://github.com/tddschn/git-pp"
+repository = "https://github.com/tddschn/git-pp"
+keywords = ["git", "asyncio"]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/tddschn/git-pp/issues"
 
 [tool.poetry.scripts]
 git-pp = "git_pp.git_pp:main_sync"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+loguru = {version = "^0.6.0", extras = ["loguru"]}
 
 [tool.poetry.dev-dependencies]
 bump2version = "^1.0.1"
