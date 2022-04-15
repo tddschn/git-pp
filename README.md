@@ -6,7 +6,7 @@ Powered by `asyncio`, with no dependency besides `python>=3.10` and `git`.
 
 - [git pp](#git-pp)
 	- [Features](#features)
-		- [Use cases and example usage](#use-cases-and-example-usage)
+	- [Use cases and example usage](#use-cases-and-example-usage)
 	- [Demo](#demo)
 	- [Installation](#installation)
 		- [pipx](#pipx)
@@ -19,7 +19,7 @@ Powered by `asyncio`, with no dependency besides `python>=3.10` and `git`.
 - Pushes to multiple or all remotes of a git repository **concurrently** with `asyncio`
 - Operates on **any number of git repositories** at the same time
 
-### Use cases and example usage
+## Use cases and example usage
 - You have multiple remotes registered on a local git repository (or more)
 and want to push the changes to all or some of the remotes fast and efficiently.
 
