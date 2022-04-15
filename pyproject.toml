@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "git-pp"
-version = "1.5.3"
+version = "1.6.0"
 description = "A (tiny) Git utility for auto-committing and concurrent pushing"
 authors = ["Xinyuan Chen <45612704+tddschn@users.noreply.github.com>"]
 license = "MIT"
