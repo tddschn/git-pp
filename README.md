@@ -1,6 +1,6 @@
 # git pp
 
-Git utility for auto-committing and concurrent pushing.
+A (tiny) Git utility for auto-committing and concurrent pushing.
 
 Powered by `asyncio`, with no dependency besides `python>=3.10` and `git`.
 
