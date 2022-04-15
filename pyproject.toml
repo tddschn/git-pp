@@ -11,6 +11,7 @@ classifiers = [
 	"Framework :: AsyncIO",
 	"License :: OSI Approved :: MIT License",
 	"Topic :: Software Development :: Version Control :: Git",
+	"Typing :: Typed"
 ]
 homepage = "https://github.com/tddschn/git-pp"
 repository = "https://github.com/tddschn/git-pp"
