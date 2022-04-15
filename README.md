@@ -24,6 +24,8 @@ In this demo, git pp did the following in \~/config and \~/gui repos:
 
 First make sure the `git` executable is installed and in your `$PATH`.
 
+Note that non-UNIX systems are not officially supported.
+
 ### pipx
 
 This is the recommended installation method.
