@@ -47,6 +47,10 @@ $ yay -S python-git-pp
 
 
 ## Usage
+
+You can either invoke this tool with `git-pp` or `git pp`,
+`--help` is unsupported when using the latter.
+
 ```
 $ git pp -h
 usage: git pp [-h] [-m COMMIT_MESSAGE] [-v] [-so] [-p] [-po] [-r REMOTE [REMOTE ...]] [-b BRANCH] [-f] [-t TIMEOUT] [DIRS ...]
