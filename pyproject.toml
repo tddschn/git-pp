@@ -25,11 +25,11 @@ git-pp = "git_pp.git_pp:main_sync"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-logging-utils-tddschn = {version = "^0.1.5", extras = ["logging"]}
 
 [tool.poetry.dev-dependencies]
 bump2version = "^1.0.1"
 yapf = "^0.32.0"
+logging-utils-tddschn = "^0.1.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
