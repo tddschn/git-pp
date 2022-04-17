@@ -25,7 +25,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "3e0b392a1526d8d23b7dba60bd299533b539d7def4f2420d5c95ffc1119528d7"
+content-hash = "e10586b2e163763035e9a0e28c85d07b7cf2a3b6ff96153c195bbdaf477dc4ed"
 
 [metadata.files]
 bump2version = [
