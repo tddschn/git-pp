@@ -7,16 +7,17 @@ from typing import AnyStr
 
 PathLike = AnyStr | Path
 
-try:
-    from loguru import logger  # type: ignore
-    logger.disable(__name__)
-except:
-    import logging
-    from logging import NullHandler
-    # logging.basicConfig(level=logging.NOTSET)
-    logger = logging.getLogger(__name__)
-    logger.addHandler(NullHandler())
-    logger.setLevel(logging.INFO)
+from git_pp import logger
+# try:
+#     from loguru import logger  # type: ignore
+#     logger.disable(__name__)
+# except:
+#     import logging
+#     from logging import NullHandler
+#     # logging.basicConfig(level=logging.NOTSET)
+#     logger = logging.getLogger(__name__)
+#     logger.addHandler(NullHandler())
+#     logger.setLevel(logging.INFO)
 
 
 # logger.add(sys.stdout,

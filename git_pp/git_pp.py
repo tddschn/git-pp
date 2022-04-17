@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-Author : Teddy Xinyuan Chen <45612704+tddschn@users.noreply.github.com>
+Author : Xinyuan Chen <45612704+tddschn@users.noreply.github.com>
 Date   : 2022-04-12
-Purpose: Rock the Casbah
 """
 
 import argparse, asyncio

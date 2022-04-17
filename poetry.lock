@@ -15,6 +15,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "logging-utils-tddschn"
+version = "0.1.5"
+description = "Logging utilities for personal use."
+category = "main"
+optional = false
+python-versions = ">=3.10,<4.0"
+
+[[package]]
 name = "loguru"
 version = "0.6.0"
 description = "Python logging made (stupidly) simple"
@@ -51,7 +59,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "aef1a14e7e4990122fc6b1e3fc56c2f868d818b77168b16c93e15f5163e0ea3b"
+content-hash = "454c5e97ad1052a62e3da0c345bab374ab3fab0da5d43eee4e2f9157d09b9601"
 
 [metadata.files]
 bump2version = [
@@ -61,6 +69,10 @@ bump2version = [
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
+]
+logging-utils-tddschn = [
+    {file = "logging-utils-tddschn-0.1.5.tar.gz", hash = "sha256:0bea9d28a6b3976e37d13765a64e59da2c1663f42e8c22b098ef994e4c9d7a74"},
+    {file = "logging_utils_tddschn-0.1.5-py3-none-any.whl", hash = "sha256:cd5e9c4792087edcf04bd2e10fef1e2edbbe68df530a3ba4ee7df1eaa991f191"},
 ]
 loguru = [
     {file = "loguru-0.6.0-py3-none-any.whl", hash = "sha256:4e2414d534a2ab57573365b3e6d0234dfb1d84b68b7f3b948e6fb743860a77c3"},
