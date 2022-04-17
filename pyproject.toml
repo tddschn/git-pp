@@ -25,7 +25,6 @@ git-pp = "git_pp.git_pp:main_sync"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-loguru = {version = "^0.6.0", extras = ["loguru"]}
 logging-utils-tddschn = "^0.1.5"
 
 [tool.poetry.dev-dependencies]
