@@ -6,8 +6,8 @@ Powered by `asyncio`, with no dependency besides `python>=3.10` and `git`.
 
 - [git pp](#git-pp)
   - [Features](#features)
-  - [Use cases and example usage](#use-cases-and-example-usage)
   - [Demo](#demo)
+  - [Use cases and example usage](#use-cases-and-example-usage)
   - [Installation](#installation)
     - [pipx](#pipx)
     - [pip](#pip)
@@ -18,6 +18,17 @@ Powered by `asyncio`, with no dependency besides `python>=3.10` and `git`.
 - Auto-stages and commits with custom or generated commit messages
 - Pushes to multiple or all remotes of a git repository **concurrently** with `asyncio`
 - Operates on **any number of git repositories** at the same time
+
+## Demo
+
+<!-- [![asciicast](https://asciinema.org/a/487579.png)](https://asciinema.org/a/487579) -->
+<!-- <a href="https://asciinema.org/a/487579"><img src="https://asciinema.org/a/487579.png" alt="asciicast" style="width:500px;height:300px;"></a> -->
+<a href="https://asciinema.org/a/487579"><img src="https://asciinema.org/a/487579.svg" alt="Asciicast" width="650"/></a>
+
+In this demo, git pp did the following in \~/config and \~/gui repos:
+
+- (Concurrently) Auto staged all changes and commits with ISO-8601 timestamps as commit messages;
+- (Concurrently) Pushed the changes in the checked out branch to all of their remotes, in this case, they’re origin and lab.
 
 ## Use cases and example usage
 - You have multiple remotes registered on a local git repository (or more)
@@ -50,17 +61,6 @@ $ git pp --push --remote [one or more remotes]
 $ git pp -p --timeout 10
 $ git pp -p -b dev ~/my-proj ~/my-proj2
 ```
-
-## Demo
-
-<!-- [![asciicast](https://asciinema.org/a/487579.png)](https://asciinema.org/a/487579) -->
-<!-- <a href="https://asciinema.org/a/487579"><img src="https://asciinema.org/a/487579.png" alt="asciicast" style="width:500px;height:300px;"></a> -->
-<a href="https://asciinema.org/a/487579"><img src="https://asciinema.org/a/487579.svg" alt="Asciicast" width="650"/></a>
-
-In this demo, git pp did the following in \~/config and \~/gui repos:
-
-- (Concurrently) Auto staged all changes and commits with ISO-8601 timestamps as commit messages;
-- (Concurrently) Pushed the changes in the checked out branch to all of their remotes, in this case, they’re origin and lab.
 
 ## Installation
 
