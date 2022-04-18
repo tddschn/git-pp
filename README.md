@@ -5,15 +5,15 @@ A (tiny) Git utility for auto-committing and concurrent pushing.
 Powered by `asyncio`, with no dependency besides `python>=3.10` and `git`.
 
 - [git pp](#git-pp)
-	- [Features](#features)
-	- [Use cases and example usage](#use-cases-and-example-usage)
-	- [Demo](#demo)
-	- [Installation](#installation)
-		- [pipx](#pipx)
-		- [pip](#pip)
-		- [AUR](#aur)
-	- [Usage](#usage)
-	- [Develop](#develop)
+  - [Features](#features)
+  - [Use cases and example usage](#use-cases-and-example-usage)
+  - [Demo](#demo)
+  - [Installation](#installation)
+    - [pipx](#pipx)
+    - [pip](#pip)
+    - [AUR](#aur)
+  - [Usage](#usage)
+  - [Develop](#develop)
 ## Features
 - Auto-stages and commits with custom or generated commit messages
 - Pushes to multiple or all remotes of a git repository **concurrently** with `asyncio`
@@ -54,8 +54,8 @@ $ git pp -p -b dev ~/my-proj ~/my-proj2
 ## Demo
 
 <!-- [![asciicast](https://asciinema.org/a/487579.png)](https://asciinema.org/a/487579) -->
-<a href="https://asciinema.org/a/487579"><img src="https://asciinema.org/a/487579.png" alt="asciicast" style="width:500px;height:300px;"></a>
-
+<!-- <a href="https://asciinema.org/a/487579"><img src="https://asciinema.org/a/487579.png" alt="asciicast" style="width:500px;height:300px;"></a> -->
+<a href="https://asciinema.org/a/487579"><img src="https://asciinema.org/a/487579.svg" alt="Asciicast" width="650"/></a>
 
 In this demo, git pp did the following in \~/config and \~/gui repos:
 
