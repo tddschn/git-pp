@@ -11,6 +11,12 @@ from git_pp import __version__, __app_name__
 from git_pp.git_pre_pull import git_pre_pull, git_pre_pull_and_push_to_all_remote_C
 from git_pp.git_push_to_all_remotes import git_push_to_all_remote_C
 
+try:
+    import uvloop
+    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+except ImportError:
+    pass
+
 
 # --------------------------------------------------
 def get_args():
