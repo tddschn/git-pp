@@ -20,4 +20,7 @@ major:
 push:
 	git push origin master
 
+yapf:
+	poetry run yapf -i -vv **/*.py
+
 .PHONE: *

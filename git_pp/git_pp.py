@@ -65,7 +65,9 @@ async def git_pp(version: bool = typer.Option(
                  timeout: float = typer.Option(
                      None, help='Timeout for a single push')):
     if push and push_only:
-        sys.exit('Error: -po and -p are mutually exclusive')
+        typer.secho('Error: -po and -p are mutually exclusive',
+                    fg=typer.colors.RED)
+        raise typer.Exit()
     elif push:
         await git_pre_pull_and_push_to_all_remote_C(
             dirs=dirs,
