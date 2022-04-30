@@ -26,11 +26,13 @@ git-pp = "git_pp.git_pp:main_sync"
 [tool.poetry.dependencies]
 python = "^3.10"
 uvloop = {version = "^0.16.0", extras = ["uvloop"]}
+typer = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
 bump2version = "^1.0.1"
 yapf = "^0.32.0"
 logging-utils-tddschn = "^0.1.5"
+toml = "^0.10.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
