@@ -7,6 +7,7 @@ Date   : 2022-04-12
 import argparse, asyncio
 from pathlib import Path
 import sys
+
 from . import __version__, __app_name__
 from .git_pre_pull import git_pre_pull, git_pre_pull_and_push_to_all_remote_C
 from .git_push_to_all_remotes import git_push_to_all_remote_C
@@ -18,13 +19,51 @@ try:
 except ImportError:
     pass
 
-app = typer.Typer(name='git-pp')
+app = typer.Typer(name='git-pp', invoke_without_command=True)
+
+
+def _version_callback(value: bool) -> None:
+    if value:
+        typer.echo(f"{__app_name__} v{__version__}")
+        raise typer.Exit()
 
 
 @app.callback()
-async def git_pp(dirs: list[Path], commit_message: str, status_only: bool,
-                 push_only: bool, push: bool, remotes: list[str], branch: str,
-                 force: bool, timeout: float):
+async def git_pp(version: bool = typer.Option(
+    None,
+    "--version",
+    "-v",
+    help="Show the application's version and exit.",
+    callback=_version_callback,
+    is_eager=True,
+),
+                 dirs: list[Path] = typer.Argument(None,
+                                                   help='Dirs to operate on'),
+                 commit_message: str = typer.Option(None,
+                                                    '-m',
+                                                    '--commit-message',
+                                                    help='commit message'),
+                 status_only: bool = typer.Option(False,
+                                                  '-so',
+                                                  '--status-only',
+                                                  help='Prints status only'),
+                 push_only: bool = typer.Option(
+                     False,
+                     '-po',
+                     '--push-only',
+                     help='Push to all remotes, without pre_pull'),
+                 push: bool = typer.Option(False,
+                                           '-p',
+                                           '--push',
+                                           help='Push to all remotes'),
+                 remotes: list[str] = typer.Option(None,
+                                                   '-r',
+                                                   '--remote',
+                                                   help='Remote name'),
+                 branch: str = typer.Option(None, help='Branch name'),
+                 force: bool = typer.Option(False, help='Force push'),
+                 timeout: float = typer.Option(
+                     None, help='Timeout for a single push')):
     if push and push_only:
         sys.exit('Error: -po and -p are mutually exclusive')
     elif push:

@@ -13,6 +13,17 @@ six = "*"
 test = ["astroid", "pytest"]
 
 [[package]]
+name = "better-exceptions"
+version = "0.3.3"
+description = "Pretty and helpful exceptions, automatically"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+
+[[package]]
 name = "bump2version"
 version = "1.0.1"
 description = "Version-bump your software with a single command!"
@@ -134,12 +145,17 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "fc9bb8a2721aadadd85b8bd31a0a58d07e82192a764e11880cd7a22ca3733489"
+content-hash = "a634d453600fad9455ccfb00d534680f33c7f1858d641927f79ec675eb356af9"
 
 [metadata.files]
 asttokens = [
     {file = "asttokens-2.0.5-py2.py3-none-any.whl", hash = "sha256:0844691e88552595a6f4a4281a9f7f79b8dd45ca4ccea82e5e05b4bbdb76705c"},
     {file = "asttokens-2.0.5.tar.gz", hash = "sha256:9a54c114f02c7a9480d56550932546a3f1fe71d8a02f1bc7ccd0ee3ee35cf4d5"},
+]
+better-exceptions = [
+    {file = "better_exceptions-0.3.3-py3-none-any.whl", hash = "sha256:9c70b1c61d5a179b84cd2c9d62c3324b667d74286207343645ed4306fdaad976"},
+    {file = "better_exceptions-0.3.3-py3.8.egg", hash = "sha256:bf111d0c9994ac1123f29c24907362bed2320a86809c85f0d858396000667ce2"},
+    {file = "better_exceptions-0.3.3.tar.gz", hash = "sha256:e4e6bc18444d5f04e6e894b10381e5e921d3d544240418162c7db57e9eb3453b"},
 ]
 bump2version = [
     {file = "bump2version-1.0.1-py2.py3-none-any.whl", hash = "sha256:37f927ea17cde7ae2d7baf832f8e80ce3777624554a653006c9144f8017fe410"},

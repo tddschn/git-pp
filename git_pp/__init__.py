@@ -1,5 +1,5 @@
 __version__ = '1.10.0'
-__app_name__ = 'git pp'
+__app_name__ = 'git-pp'
 
 try:
     from logging_utils_tddschn import get_logger  # type: ignore
