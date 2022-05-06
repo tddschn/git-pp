@@ -34,7 +34,6 @@ yapf = "^0.32.0"
 logging-utils-tddschn = "^0.1.5"
 toml = "^0.10.2"
 icecream = "^2.1.2"
-better-exceptions = "^0.3.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
