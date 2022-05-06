@@ -7,47 +7,15 @@ Date   : 2022-04-12
 import argparse, asyncio
 from pathlib import Path
 import sys
-from . import __version__, __app_name__
-from .git_pre_pull import git_pre_pull, git_pre_pull_and_push_to_all_remote_C
-from .git_push_to_all_remotes import git_push_to_all_remote_C
-import typer
+from git_pp import __version__, __app_name__
+from git_pp.git_pre_pull import git_pre_pull, git_pre_pull_and_push_to_all_remote_C
+from git_pp.git_push_to_all_remotes import git_push_to_all_remote_C
 
 try:
     import uvloop
     asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 except ImportError:
     pass
-
-app = typer.Typer(name='git-pp')
-
-
-@app.callback()
-async def git_pp(dirs: list[Path], commit_message: str, status_only: bool,
-                 push_only: bool, push: bool, remotes: list[str], branch: str,
-                 force: bool, timeout: float):
-    if push and push_only:
-        typer.secho('Error: -po and -p are mutually exclusive',
-                    fg=typer.colors.RED)
-        raise typer.Exit()
-    elif push:
-        await git_pre_pull_and_push_to_all_remote_C(
-            dirs=dirs,
-            commit_message=commit_message,
-            status_only=status_only,
-            remotes=remotes,
-            branch=branch,
-            force=force,
-            timeout=timeout)
-    elif push_only:
-        await git_push_to_all_remote_C(dirs=dirs,
-                                       remotes=remotes,
-                                       branch=branch,
-                                       force=force,
-                                       timeout=timeout)
-    else:
-        await git_pre_pull(dirs[0] if dirs else '.',
-                           commit_message=commit_message,
-                           status_only=status_only)
 
 
 # --------------------------------------------------
@@ -166,8 +134,7 @@ async def main():
 
 
 def main_sync():
-    # asyncio.run(main())
-    asyncio.run(app())
+    asyncio.run(main())
 
 
 if __name__ == '__main__':
