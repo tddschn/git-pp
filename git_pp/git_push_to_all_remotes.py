@@ -171,12 +171,12 @@ async def git_push_to_all_remote_C(dirs: list[PathLike],
     if not any(status_codes):
         # all 0
         print(
-            f'✅ Pushed {"current branch" if branch is not None else branch} of {dirs} to all of their remotes successfully.'
+            f'✅ Pushed {"current branch" if branch is None else branch} of {dirs} to all of their remotes successfully.'
             + ('(FORCE)' if force else ''))
         return 0
     else:
         print(
-            f'❌ Failed to push {"current branch" if branch is not None else branch} of {dirs} to all of their remotes.'
+            f'❌ Failed to push {"current branch" if branch is None else branch} of {dirs} to all of their remotes.'
             + ('(FORCE)' if force else ''))
         return 1
 
