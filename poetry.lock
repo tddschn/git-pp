@@ -52,11 +52,14 @@ pygments = ">=2.2.0"
 
 [[package]]
 name = "logging-utils-tddschn"
-version = "0.1.5"
+version = "0.1.8"
 description = "Logging utilities for personal use."
 category = "dev"
 optional = false
 python-versions = ">=3.10,<4.0"
+
+[package.dependencies]
+utils-tddschn = ">=0.1.4,<0.2.0"
 
 [[package]]
 name = "pygments"
@@ -94,6 +97,14 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "utils-tddschn"
+version = "0.1.6"
+description = ""
+category = "main"
+optional = false
+python-versions = ">=3.10,<4.0"
+
+[[package]]
 name = "uvloop"
 version = "0.16.0"
 description = "Fast implementation of asyncio event loop on top of libuv"
@@ -117,7 +128,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "cd14bb02ebe786b37baabe227f945b9254f635c66a0868a30f8e5b57e9b06fc3"
+content-hash = "d50ab3903be34defedeb6dd914936e6788e00628c1d7c80e52b82d7546c4dd1c"
 
 [metadata.files]
 asttokens = [
@@ -141,8 +152,8 @@ icecream = [
     {file = "icecream-2.1.2.tar.gz", hash = "sha256:09300b2d1c678712410cbd47c95198eb1b580f66f311a554ccd6b9e758ece0ee"},
 ]
 logging-utils-tddschn = [
-    {file = "logging-utils-tddschn-0.1.5.tar.gz", hash = "sha256:0bea9d28a6b3976e37d13765a64e59da2c1663f42e8c22b098ef994e4c9d7a74"},
-    {file = "logging_utils_tddschn-0.1.5-py3-none-any.whl", hash = "sha256:cd5e9c4792087edcf04bd2e10fef1e2edbbe68df530a3ba4ee7df1eaa991f191"},
+    {file = "logging-utils-tddschn-0.1.8.tar.gz", hash = "sha256:fb6ba94645ff4ccda264534cae9d2e7502c00c022bdf3ffb6684bffd732bccdd"},
+    {file = "logging_utils_tddschn-0.1.8-py3-none-any.whl", hash = "sha256:8b96903320cddaf4f31a03f5e07e34be5cd2b7b21415743607c3cc47f1fd5bb1"},
 ]
 pygments = [
     {file = "Pygments-2.12.0-py3-none-any.whl", hash = "sha256:dc9c10fb40944260f6ed4c688ece0cd2048414940f1cea51b8b226318411c519"},
@@ -185,6 +196,10 @@ six = [
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
+]
+utils-tddschn = [
+    {file = "utils-tddschn-0.1.6.tar.gz", hash = "sha256:2fb56285cdc007316ab9b619f1f180cf93c8f47d92f1cd40dbacc6eac97c6c31"},
+    {file = "utils_tddschn-0.1.6-py3-none-any.whl", hash = "sha256:0cc0415cd098d83fb62206f0ca0bda790225170e8a82b9befdbc3d1cd2e51a30"},
 ]
 uvloop = [
     {file = "uvloop-0.16.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:6224f1401025b748ffecb7a6e2652b17768f30b1a6a3f7b44660e5b5b690b12d"},
