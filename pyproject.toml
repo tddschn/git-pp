@@ -33,6 +33,7 @@ yapf = "^0.32.0"
 logging-utils-tddschn = "^0.1.5"
 toml = "^0.10.2"
 icecream = "^2.1.2"
+pyinstrument = "^4.1.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

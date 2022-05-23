@@ -2,17 +2,11 @@
 
 import asyncio, sys
 from asyncio.subprocess import Process
-from pathlib import Path
-from typing import AnyStr
+from os import PathLike
 
-PathLike = AnyStr | Path
-
-from git_pp import logger
+from . import logger
 
 
-# logger.add(sys.stdout,
-#            colorize=True,
-#            format="{level} <green>{time}</green> <level>{message}</level>")
 async def git_get_all_remotes(cwd: PathLike | None = None) -> list[str]:
     program = ['git', 'remote']
     proc: Process = await asyncio.create_subprocess_exec(
@@ -31,34 +25,6 @@ async def git_get_current_branch(cwd: PathLike | None = None) -> str:
     stdout, _ = await proc.communicate()
     return stdout.decode().strip()
 
-
-# async def git_push_to_remote(branch: str,
-#                              remote: str,
-#                              force=False,
-#                              timeout=None,
-#                              cwd: PathLike | None = None) -> tuple[int, str]:
-#     """pushes branch to remote named remote, and returns the return code
-
-#     Args:
-#         remote (str): name of the remote
-
-#     Returns:
-#         int: return code
-#     """
-#     program = ['git', 'push', remote, branch]
-#     if force:
-#         program.append('--force')
-#     process: Process = await asyncio.create_subprocess_exec(*program, cwd=cwd)
-#     print(f'Pushing {branch} to {remote}.')
-#     try:
-#         status_code = await asyncio.wait_for(process.wait(), timeout=timeout)
-#         # print(status_code)
-#     except asyncio.TimeoutError:
-#         print('Timed out waiting to finish, terminating...')
-#         process.terminate()
-#         status_code = await process.wait()
-#         # print(status_code)
-#     return (status_code, remote)
 
 
 async def git_push_to_remote(remote: str,

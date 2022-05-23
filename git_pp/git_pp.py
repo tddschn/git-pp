@@ -4,18 +4,18 @@ Author : Xinyuan Chen <45612704+tddschn@users.noreply.github.com>
 Date   : 2022-04-12
 """
 
-import argparse, asyncio
+import argparse
 from pathlib import Path
-import sys
-from git_pp import __version__, __app_name__
-from git_pp.git_pre_pull import git_pre_pull, git_pre_pull_and_push_to_all_remote_C
-from git_pp.git_push_to_all_remotes import git_push_to_all_remote_C
+from . import __version__, __app_name__, logger
 
-try:
-    import uvloop
-    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-except ImportError:
-    pass
+def import_asyncio():
+    import asyncio
+    try:
+        import uvloop
+        asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+    except ImportError:
+        pass
+    return asyncio
 
 
 # --------------------------------------------------
@@ -98,8 +98,8 @@ def get_args():
     return parser.parse_args()
 
 
-async def main():
-    args = get_args()
+async def main(args):
+    # args = get_args()
     dirs = args.dirs
     commit_message = args.commit_message
     status_only = args.status_only
@@ -109,6 +109,10 @@ async def main():
     branch = args.branch
     force = args.force
     timeout = args.timeout
+
+    import sys
+    from .git_pre_pull import git_pre_pull, git_pre_pull_and_push_to_all_remote_C
+    from .git_push_to_all_remotes import git_push_to_all_remote_C
 
     if push and push_only:
         sys.exit('Error: -po and -p are mutually exclusive')
@@ -134,7 +138,11 @@ async def main():
 
 
 def main_sync():
-    asyncio.run(main())
+    logger.info('getting args')
+    args = get_args()
+    logger.info('importing asyncio')
+    asyncio = import_asyncio()
+    asyncio.run(main(args))
 
 
 if __name__ == '__main__':
