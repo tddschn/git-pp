@@ -1,4 +1,4 @@
-__version__ = '1.10.6'
+__version__ = '1.10.7'
 __app_name__ = 'git pp'
 
 try:
