@@ -26,7 +26,7 @@ git-pp = "git_pp.git_pp:main_sync"
 [tool.poetry.dependencies]
 python = "^3.10"
 uvloop = {version = "^0.16.0", optional = true}
-utils-tddschn = "0.1.6"
+utils-tddschn = "^1.0.4"
 
 [tool.poetry.dev-dependencies]
 bump2version = "^1.0.1"
