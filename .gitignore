@@ -1,3 +1,4 @@
+*.txt
 *_cli.py
 gh_*.py
 
